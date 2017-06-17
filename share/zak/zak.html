@@ -1,0 +1,307 @@
+---
+title: 'Comments and questions'
+permalink: '/zak'
+layout: page
+published: true
+navs:
+ - title: "General"
+   url: "#section1"
+ - title: "HomePage"
+   url: "#section2"
+ - title: "Launch Page Builder"
+   url: "#section3"
+ - title: "Product Page"
+   url: "#section4"
+ - title: "Collection Page"
+   url: "#section5"
+ - title: "Blog Page"
+   url: "#section6"
+ - title: "Cart Page"
+   url: "#section7"
+---
+
+
+<ul>
+	{% for nav in page.navs %}
+	<li>
+		<a href="{{nav.url}}">{{nav.title}}</a>
+	</li>
+	{% endfor %}
+</ul>
+
+<hr>
+
+<p>
+	Hey Zak I've collected my questions and comments are, so let's start
+</p>
+
+<h2 id="section1">
+	# General
+</h2>
+
+<p>
+	<em>At first I want to say that all things assuming to be controled from theme settings, text, images and etc.</em>
+</p>
+
+<p>
+1. About buttom	<strong>Popup</strong> 
+</p>
+
+<p>
+	<img src="https://lh3.googleusercontent.com/-DmBhmYRyFGc/WUQjmIQsW_I/AAAAAAAAE9U/9qnfN1Mn58EkSC6Uqk1PDrw09DhKcDjDACHMYCw/s700/Photoshop_2017-06-16_22-29-43.png" alt="">
+</p>
+
+<p>
+	This part is always going to be visible, or it will be shown by clicking on some button
+</p>
+
+<hr>
+
+<p>
+2.	About <strong>navigation bar</strong> it is going to be styicky on scroll as I can understand from brief, which part of this is going to remain visible when it is sticky, only navigation, or the whole header ?
+</p>
+
+<p>
+	<img src="https://lh3.googleusercontent.com/-9jYXNNvjNWg/WUQj9NiijQI/AAAAAAAAE9c/eGCM0T6lREUpIpvAqpM9I2Oxsbfy6ZHNACHMYCw/s700/Photoshop_2017-06-16_22-31-16.png" alt="">
+</p>
+
+<hr>
+
+<p>
+	3. Under menu I can see a bar with links, I guess this also should be controlled from theme customization section, this bar will be visible on home page only or for the whole site ?
+</p>
+
+<p>
+	<img src="https://lh3.googleusercontent.com/-lrmX5hu8rMg/WUQk16u1cmI/AAAAAAAAE9g/TeGNBOJ9zGUOmlfqfxKMmk12efpNlsvFwCHMYCw/s0/Photoshop_2017-06-16_22-35-03.png" alt="">
+</p>
+
+<hr>
+
+<p>
+	4. About <strong>Whishlist</strong>
+</p>
+
+<p>
+	<img src="https://lh3.googleusercontent.com/-zGH0Py4dLLE/WUQlWz7vaNI/AAAAAAAAE9k/ibn0zEXZc1E8U4CaYqQSb3CaQ0L_CqgWQCHMYCw/s0/Photoshop_2017-06-16_22-37-14.png" alt="">
+</p>
+
+<p>
+	There are several method for this to do without using app
+
+	<ol>
+		<li>
+			First method is using customer tags method, as we know Shopify doesn't have whishlist functionality, and this method is hack which is commned used, it adds new tags to customders and require the customders to be registered and logged in, I don't advice  this method, as it is very dirty, add many tags to customer, and also causes memory limits.
+			<br>
+			More about this method you can learn here - <a target="_blank" href="https://github.com/zakhardage/Shopify-Wish-List">non-app wish list using customer.tags</a>
+
+			<br>
+			<em>
+				February 6, 2017 Shopify updated customer forms: "Customers submitting a contact form or signing up for a mailing list more than once in a 24 hour period need to complete a captcha to verify that they’re human."
+				<br>
+				This update breaks the wishlist functionality. You can contact support and request they update your store ("it's actually a tag that has to be added on the back end") to remove the captcha functionality. Of course, this makes your shop vulnerable to spam.
+			</em>
+			<br>
+			<em>
+				Note on limitations from one user:
+				"So I've been testing my wishlist function for months now and I've run into a wall because of the # of tags used for one user. Any account page that I tried to access for that user was not accessible and I got the following error message 'liquid error: memory limits exceeded'."
+			</em>
+		</li>
+		<li>
+			Another method is using JS and localStorage, which is better solution, it allows to add product to whishlis without requiring register and login, it allows to stay in the same page when user add product to the whishlist, the limitation that it is not saved for customer in their account, but it is saved into customer's browser localStorage, and when customer clear its browser cache, the whishlist will be cleared as well. Anyway I will advice this method, rather than the method with customer tags.
+
+			<br>
+			More about this method you can learn here - <a target="_blank" href="https://github.com/dlerm/shopify-wishlist">wishlist using localStorage</a>
+		</li>
+	</ol>
+</p>
+
+<hr>
+
+<h2 id="section2">Homepage</h2>
+
+<p>
+	5. About <strong>Slideshow</strong>. Is there going to be any video in slideshow, for example some of slides to be video ? if yes, you should know that in desktop it can be autoplay but in mobile devices now all videos can be played only after the user click on play button.
+
+	<br>
+	<blockquote>
+		
+	Starting in iOS 10, WebKit relaxes its inline and autoplay policies to make these presentations possible, but still keeps in mind sites’ bandwidth and users’ batteries.
+	<br>
+
+	By default, WebKit will have the following policies:
+	<br>
+	 <em>- video elements will be allowed to autoplay without a user gesture if their source media contains no audio tracks.</em>
+	 <br>
+	 <em>- video muted elements will also be allowed to autoplay without a user gesture. If a element gains an audio track or becomes un-muted without a user gesture, playback will pause.</em>
+
+	 <cite>
+	 	<a href="https://stackoverflow.com/questions/42160528/html5-autoplay-video-in-mobile-device">html5 autoplay video in Mobile device</a>
+	 </cite>
+	</blockquote>
+</p>
+
+<hr>
+
+<p>
+	6. About <strong>additional elements</strong> in home page
+</p>
+
+<p>
+	<img src="https://lh3.googleusercontent.com/-5ylnZre8MlE/WUQqSDMf3TI/AAAAAAAAE98/SqBgJQxMMGQz9klHFK9Ft6lTo_xFj3L3wCHMYCw/s0/Photoshop_2017-06-16_22-58-06.png" alt="">
+</p>
+
+<p>
+	I guess this is going to be editable from theme customization section as well ? So this ellements can be added home page, removed, reordered and so on ?
+</p>
+
+<p>
+	No more questions or comments about homepage, I will setup it using new sections future, which allow to build homepage as you want, adding new sections reorder them, and so on, so the additional elements will be part of this.
+</p>
+
+<h2 id="section3">Launch Page Builder</h2>
+
+<p>
+	I need some more detailed information about this page, is this going to be separate page or alternative home page, or maybe this is alternative product page layout ?
+</p>
+
+<p>
+	<img src="http://u.sarhov.com/2scdEph" alt="">
+</p>
+
+<p>
+	What these steps are meaning, I need more information about this as well.
+</p>
+
+<p>
+	About <strong>Timers</strong> in this page and another pages
+</p>
+
+<p>
+	<img src="" alt="">
+</p>
+
+<p>
+	<img src="http://u.sarhov.com/2scmfIA" alt="">
+</p>
+
+<p>
+	So, I guess it should be some functionality for timers, that the store owner can enter timer for each product, as the timers are going to be in products listing page as well, yes ?
+</p>
+
+<p>
+	I think the best method is using product metafields, it is free chrome addon which can be used to have additional fields in product dashboard, I can make a documentation how to work with this, after I implement this.
+</p>
+
+<h2 id="section4">Product Page</h2>
+
+<p>
+	About <strong>progress bar, sold/remain items</strong>
+</p>
+
+<p>
+	<img src="http://u.sarhov.com/2sciVgm" alt="">
+</p> 
+
+<p>
+	The same metafields can be used for sold and remain items and its progress bar in single product page.
+</p>
+
+<p>
+	<em>You should know that all those timers and progress bar are not real timers, and just visual timers, you know this, don't you ?</em>
+</p>
+
+<p>
+	About <strong> Share for discount </strong>.
+</p>
+
+<p>
+	<img src="http://u.sarhov.com/2sc7qWp" alt="">
+</p>
+
+<p>
+	I don't know yet how to implement it without app, but I think there will be a way for this, I will search on this.
+</p>
+
+<p>
+	About <strong> Real time notification </strong> bar about purchasing - <a href="https://apps.shopify.com/fomo">referred app</a> - this can be done <strong>without</strong> any app, it will do the same the app is doing, will show random products on left/right top/bottom corners, with its options in theme customization section.
+</p>
+
+<h2 id="section5">Collection Page</h2>
+
+<p>
+	For collection I have questions about pagination and the link of <strong>View All</strong>
+</p>
+
+<p>
+	<img src="http://u.sarhov.com/2sc5BZn" alt="">
+</p>
+
+<p>
+	As you know Shopify doesn't allow to load more than 50 products per page, and in this case, what view all link is going to do ?
+</p>
+
+<p>
+	About <strong>sorting dropdown</strong>
+</p>
+
+<p>
+	<img src="http://u.sarhov.com/2sc7qFM" alt="">
+</p>
+
+<p>
+	What is the first dropdown will do ? It will sort products via tag, each horizontal arrow will open some list of sorts ? I am talking about these arrows.
+</p>
+
+<p>
+	<img src="http://u.sarhov.com/2scoBqU" alt="">
+</p>
+
+<p>
+	And about clear, it means remore all tag sorting, yes?
+</p>
+
+<p>
+	For second dropdown I don't have questions or comments, it can be done using default sorting functionality of Shopify.
+</p>
+
+<h2 id="section6">Blog Page</h2>
+
+<p>
+	For blog page, slideshow can be implemented using using sections and they can be easily edited in theme customization section.
+</p>
+
+<p>
+	About this icon, what functionality will this icon have ?
+</p>
+
+<p>
+	<img src="http://u.sarhov.com/2rGOKuc" alt="">
+</p>
+
+<p>
+	This comment icon will show count of default comments in Shopify or count of comments from disquss ?
+</p>
+
+<p>
+	<img src="http://u.sarhov.com/2rHnR9A" alt="">
+</p>
+
+<h2 id="section7">Cart Page</h2>
+
+<p>
+	What block is meaning, it means some upsell product in cart page ? It will be common for all products, or it will be unique depending on what products are currently in the cart ?
+</p>
+
+<p>
+	<img src="http://u.sarhov.com/2rGWxbF" alt="">
+</p>
+
+<hr>
+
+<p>
+	I don't have any other questions or comments, all another requirements are clear and be done.
+</p>
+
+<p>
+	If you need clarification for some functionality and need comments from me, let me please know.
+</p>

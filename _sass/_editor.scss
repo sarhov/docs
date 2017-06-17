@@ -8,6 +8,11 @@
   color: #444;
   word-break:break-all;
 
+  br{
+    display: block;
+    margin: 7px 0;
+  }
+
   p{
     margin-bottom: 15px;
     font-size: 18px;
